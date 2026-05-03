@@ -161,9 +161,9 @@ Key libraries:
 
 ## AI Disclosure
 
-## AI Disclosure
-
 Claude (Anthropic) was used to assist with explanations, code review and documentation polish. All design, architecture, and implementation decisions were made and verified by the author.
+
+---
 
 ## License
 
