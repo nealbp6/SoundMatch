@@ -1,6 +1,6 @@
 # SoundMatch
 
-A music similarity search system that uses audio feature extraction and a K-Nearest Neighbors model to find songs with similar acoustic characteristics. Given any MP3 file, SoundMatch returns the most acoustically similar tracks from the FMA dataset.
+A music similarity search system that uses audio feature extraction and a K-Nearest Neighbors model to find songs with similar acoustic characteristics. Given any MP3 file, SoundMatch returns the most acoustically similar tracks from the FMA dataset. For more detail, see the included PDF documentation. This project was inspired by (https://www.youtube.com/watch?v=V5Psciq3T_g&t=331s).
 
 ---
 
@@ -25,7 +25,6 @@ SoundMatch/
 ├── data.py               # Audio feature extraction and CSV handling
 ├── save_load_model.py    # Model persistence (joblib save/load)
 ├── requirements.txt      # Python dependencies
-├── activate.txt          # Virtual environment setup instructions
 ├── prepared_data.csv     # Pre-computed features (generated on first run)
 ├── soundmatch.joblib     # Trained model (generated on first run)
 ├── test.mp3              # Your query audio file (place here)
@@ -79,9 +78,6 @@ cd SoundMatch
 
 ```powershell
 python -m venv venv
-
-# Allow script execution (required once per session)
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 # Activate the virtual environment
 venv/Scripts/Activate
