@@ -1,6 +1,6 @@
 # SoundMatch
 
-A music similarity search system that uses audio feature extraction and a K-Nearest Neighbors model to find songs with similar acoustic characteristics. Given any MP3 file, SoundMatch returns the most acoustically similar tracks from the FMA dataset. For more detail, see the included PDF documentation. This project was inspired by (https://www.youtube.com/watch?v=V5Psciq3T_g&t=331s).
+A music similarity search system that uses audio feature extraction and a K-Nearest Neighbors model to find songs with similar acoustic characteristics. Given any MP3 file, SoundMatch returns the most acoustically similar tracks from the FMA dataset. > See [`SoundMatch_Project_Documentation.pdf`](SoundMatch_Project_Documentation.pdf) for a more detailed project write-up. This project was inspired by (https://www.youtube.com/watch?v=V5Psciq3T_g&t=331s).
 
 ---
 
@@ -155,9 +155,18 @@ Key libraries:
 
 ---
 
+## Limitations
+
+- Hand-crafted features capture surface acoustic properties (timbre, rhythm) but not deeper musical meaning. Two songs that feel similar to a human listener may not be close in this feature space.
+- Distances are unitless — only relative ranking is meaningful.
+- Long input songs (≥30 sec) are processed in full, but FMA training tracks are uniformly 30 seconds, so feature comparability decreases for very long inputs.
+- A learned audio embedding (e.g., CLAP, OpenL3) would likely produce better-quality similarity at the cost of complexity.
+
+---
+
 ## AI Disclosure
 
-Claude (Anthropic) was used to assist with explanations, code review and documentation polish. All design, architecture, and implementation decisions were made and verified by the author.
+Claude (Anthropic) was used to assist with explanations, code review, and documentation polish. All design, architecture, and implementation decisions were made and verified by the author.
 
 ---
 
